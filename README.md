@@ -1,5 +1,3 @@
-### 🚀 Updated README.md (Copy-Paste this full text)
-
 ```markdown
 # 🧠 AI Assistant – Multi-Model Chat with LangChain & IBM watsonx
 
