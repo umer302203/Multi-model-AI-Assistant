@@ -1,4 +1,3 @@
-markdown
 # 🧠 AI Assistant – Multi-Model Chat with LangChain & IBM watsonx
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
@@ -66,6 +65,36 @@ graph TD
     style H fill:#052FAD,color:#fff,stroke:#333,stroke-width:2px
     style I fill:#6e8efb,color:#fff,stroke:#333,stroke-width:2px
 🔄 Data Flow (Sequence Diagram)
+sequenceDiagram
+    participant User
+    participant Flask as Flask (app.py)
+    participant Model as model.py (LangChain)
+    participant Watson as watsonx.ai
+    participant Parser as JsonOutputParser
+
+    User->>Flask: 1. Send Message + Model Selection
+    activate Flask
+    Flask->>Model: 2. Call model_response(user_prompt)
+    activate Model
+    
+    Note over Model: System prompt + Format instructions injected
+    Model->>Watson: 3. POST Request with Template
+    activate Watson
+    Watson-->>Model: 4. Raw Text Completion
+    deactivate Watson
+    
+    Model->>Parser: 5. Parse Raw Text
+    activate Parser
+    Parser->>Parser: Validate against Pydantic Schema
+    Parser-->>Model: 6. Structured Dict (summary, sentiment, response)
+    deactivate Parser
+    
+    Model-->>Flask: 7. Return Validated JSON
+    deactivate Model
+    
+    Flask->>Flask: 8. Attach Duration Metrics
+    Flask-->>User: 9. Render JSON & Update UI
+    deactivate Flask
 🛠️ Tech Stack
 Layer	Technology	Purpose
 Frontend	HTML5 + CSS3 (Glassmorphism) + Vanilla JS	Self-contained interactive UI.
