@@ -11,16 +11,20 @@
 ## 🎥 Demo Video
 
 <div align="center">
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480549624156573697?compact=1"
-          height="480"
-          width="100%"
-          frameborder="0"
-          allowfullscreen=""
-          title="AI Assistant Demo Video"
-          style="border-radius: 12px; max-width: 700px;">
-  </iframe>
-  <br/>
-  <i>⚡ A quick walkthrough of the AI Assistant in action — switching between Llama, Granite, and Mistral.</i>
+
+<!-- Video plays directly in the README (upload demo.mp4 to root folder) -->
+<video src="./demo.mp4" width="100%" controls autoplay loop muted style="border-radius: 12px; max-width: 700px;"></video>
+
+<br/>
+<i>⚡ A quick walkthrough of the AI Assistant in action — switching between Llama, Granite, and Mistral.</i>
+
+<br/><br/>
+
+<!-- Fallback / Social Link -->
+<a href="https://www.linkedin.com/posts/rana-umer-05a9a9359_ai-langchain-flask-ugcPost-7480549624156573697-DhhQ/">
+  <img src="https://img.shields.io/badge/🔗_Watch_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
 </div>
 
 ---
@@ -115,9 +119,6 @@ genai_flask_app/
 ├── requirements.txt       # Python dependencies
 ├── templates/
 │   └── index.html         # Single-page Glassmorphism UI
-├── static/
-│   ├── script.js          # Interactive frontend logic
-│   └── styles.css         # Modern glass aesthetic
 └── README.md              # This file
 ```
 
@@ -213,15 +214,6 @@ Generate an AI response with structured metadata.
 | `duration` | `float` | API response time in seconds. |
 
 ---
-
-## 🎨 UI Preview
-
-![UI Screenshot](https://via.placeholder.com/800x450.png?text=Glassmorphism+AI+Chat+UI)
-
-> *The frontend features a blurred glass effect, animated gradient background, floating orbs, and real-time loading indicators.*
-
----
-
 ## 🧪 Testing All Models (CLI)
 
 Run `llm_test.py` to compare outputs across all three models without starting the web server:
