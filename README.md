@@ -12,7 +12,6 @@
 
 <div align="center">
 
-<!-- Video plays directly in the README (upload demo.mp4 to root folder) -->
 <video src="./demo.mp4" width="100%" controls autoplay loop muted style="border-radius: 12px; max-width: 700px;"></video>
 
 <br/>
@@ -20,13 +19,11 @@
 
 <br/><br/>
 
-<!-- Fallback / Social Link -->
 <a href="https://www.linkedin.com/posts/rana-umer-05a9a9359_ai-langchain-flask-ugcPost-7480549624156573697-DhhQ/">
   <img src="https://img.shields.io/badge/🔗_Watch_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 
 </div>
-
 ---
 
 ## ✨ Key Features
